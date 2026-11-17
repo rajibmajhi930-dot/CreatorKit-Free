@@ -1,10 +1,11 @@
 
 const express = require("express");
 const cors = require("cors");
+const path = require("path");
 require("dotenv").config();
 
 const app = express();
-const PORT = 3001;
+const PORT = process.env.PORT || 3001;
 
 app.use(cors());
 app.use(express.json({ limit: "1mb" }));
@@ -39,14 +40,14 @@ function isTemporaryError(error) {
   );
 }
 
-const sleep = (ms) =>
-  new Promise(resolve => setTimeout(resolve, ms));
+const sleep = ms => new Promise(resolve => setTimeout(resolve, ms));
 
-app.get("/", (req, res) => {
+// API status
+app.get("/api/status", (req, res) => {
   res.json({
     status: "CreatorKit Backend Running",
     gemini: "gemini-3.5-flash-lite",
-    elevenlabs: "Enabled"
+    elevenlabs: Boolean(process.env.ELEVENLABS_API_KEY)
   });
 });
 
@@ -78,7 +79,6 @@ app.post("/api/generate", async (req, res) => {
     const modelName = "gemini-3.5-flash-lite";
 
     let result;
-    let lastError;
 
     for (let attempt = 1; attempt <= 2; attempt++) {
       try {
@@ -93,8 +93,6 @@ app.post("/api/generate", async (req, res) => {
 
         break;
       } catch (error) {
-        lastError = error;
-
         if (!isTemporaryError(error) || attempt === 2) {
           throw error;
         }
@@ -109,7 +107,7 @@ app.post("/api/generate", async (req, res) => {
       throw new Error("AI returned an empty response. Please try again.");
     }
 
-    return res.json({
+    res.json({
       result: output,
       model: modelName
     });
@@ -119,7 +117,7 @@ app.post("/api/generate", async (req, res) => {
 
     const temporary = isTemporaryError(error);
 
-    return res.status(temporary ? 503 : 500).json({
+    res.status(temporary ? 503 : 500).json({
       error: error.message || "AI generation failed.",
       message: temporary
         ? "Gemini server is busy. Please try again shortly."
@@ -229,10 +227,21 @@ app.post("/api/elevenlabs/tts", async (req, res) => {
   }
 });
 
-app.listen(PORT, () => {
+// Serve the website files
+app.use(express.static(path.join(__dirname)));
+
+// Unknown API routes
+app.use("/api", (req, res) => {
+  res.status(404).json({
+    error: "API endpoint not found."
+  });
+});
+
+// Start server
+app.listen(PORT, "0.0.0.0", () => {
   console.log("--------------------------------");
   console.log("CreatorKit Backend Running");
-  console.log(`http://localhost:${PORT}`);
+  console.log(`Port: ${PORT}`);
   console.log("Gemini: gemini-3.5-flash-lite");
   console.log("Output limit: 5000 tokens");
   console.log("ElevenLabs: Enabled");
