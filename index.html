@@ -1,0 +1,518 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#080b16">
+  <meta name="description" content="Free tools for YouTube creators: analytics, content creation, thumbnails, music ideas, SEO, subtitles and more.">
+
+  <title>CreatorKit Free — Creator Workspace</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div class="ambient ambient-one"></div>
+  <div class="ambient ambient-two"></div>
+
+  <header class="navbar">
+
+    <a class="logo" href="#">
+      <span class="logo-mark">C</span>
+      CreatorKit<span class="logo-accent">Free</span>
+    </a>
+
+    <nav>
+      <a href="#categories" data-en="Explore tools" data-hi="टूल्स देखें">Explore tools</a>
+      <a href="#about" data-en="About" data-hi="हमारे बारे में">About</a>
+    </nav>
+
+    <div class="nav-actions">
+      <span class="free-pill"><i></i> 100% Free to start</span>
+      <button id="languageBtn" class="language-btn">हिन्दी</button>
+    </div>
+
+  </header>
+
+  <main>
+
+    <!-- HERO SECTION -->
+
+    <section class="hero">
+
+      <div class="hero-copy">
+
+        <div class="eyebrow">
+          <span class="spark">✦</span>
+          THE CREATOR'S ALL-IN-ONE WORKSPACE
+        </div>
+
+        <h1 data-en="Create smarter.<br><span>Grow further.</span>"
+            data-hi="स्मार्ट तरीके से बनाएं।<br><span>आगे बढ़ते जाएं।">
+          Create smarter.<br>
+          <span>Grow further.</span>
+        </h1>
+
+        <p data-en="A practical toolkit for video creators — from the first idea to publishing, improving and growing your channel."
+           data-hi="वीडियो क्रिएटर्स के लिए उपयोगी टूलकिट — पहले आइडिया से लेकर पब्लिशिंग और चैनल ग्रोथ तक।">
+          A practical toolkit for video creators — from the first idea to publishing, improving and growing your channel.
+        </p>
+
+        <div class="hero-actions">
+
+          <a href="#categories" class="primary-btn">
+            Explore all tools <span>↗</span>
+          </a>
+
+          <span class="no-card">
+            <span>✓</span> No subscription required
+          </span>
+
+        </div>
+
+        <div class="hero-metrics">
+
+          <div>
+            <strong>09</strong>
+            <span>Tool categories</span>
+          </div>
+
+          <div>
+            <strong>30+</strong>
+            <span>Planned utilities</span>
+          </div>
+
+          <div>
+            <strong>₹0</strong>
+            <span>To get started</span>
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="hero-visual">
+
+        <div class="dashboard-preview">
+
+          <div class="preview-top">
+
+            <div class="window-dots">
+              <b></b>
+              <b></b>
+              <b></b>
+            </div>
+
+            <span>CREATOR WORKSPACE</span>
+            <span class="live-dot">● LIVE</span>
+
+          </div>
+
+          <div class="preview-welcome">
+            <small>YOUR CREATOR HUB</small>
+            <h3>Make every upload count.</h3>
+            <p>Your tools, all in one place.</p>
+          </div>
+
+          <div class="preview-grid">
+
+            <div class="preview-tile tile-purple">
+              <span>◈</span>
+              <small>ANALYTICS</small>
+              <b>Understand</b>
+            </div>
+
+            <div class="preview-tile tile-blue">
+              <span>✎</span>
+              <small>CONTENT</small>
+              <b>Create</b>
+            </div>
+
+            <div class="preview-tile tile-pink">
+              <span>▧</span>
+              <small>THUMBNAILS</small>
+              <b>Design</b>
+            </div>
+
+            <div class="preview-tile tile-green">
+              <span>♫</span>
+              <small>CREATOR AUDIO</small>
+              <b>Produce</b>
+            </div>
+
+          </div>
+
+          <div class="preview-footer">
+            <span class="status-check">✓</span>
+            <span>One workspace. More creative time.</span>
+          </div>
+
+        </div>
+
+        <div class="floating-chip chip-top">✦ AI-assisted tools</div>
+        <div class="floating-chip chip-bottom">↗ Creator-first workflow</div>
+
+      </div>
+
+    </section>
+
+
+    <!-- CATEGORY SECTION -->
+
+    <section class="category-section" id="categories">
+
+      <div class="section-heading">
+
+        <div>
+          <span class="section-kicker">THE TOOLKIT</span>
+          <h2>Everything in one place.</h2>
+          <p>Choose a category and open the tool you need.</p>
+        </div>
+
+        <div class="search-wrap">
+          <span>⌕</span>
+          <input id="toolSearch" type="search" placeholder="Search tools...">
+        </div>
+
+      </div>
+
+
+      <div class="category-grid" id="categoryGrid">
+
+
+        <!-- VIDEO ANALYTICS -->
+
+        <article class="category-card" data-category="analytics">
+
+          <div class="card-top">
+            <span class="category-icon purple-icon">▥</span>
+            <span class="card-count">03 TOOLS</span>
+          </div>
+
+          <h3>Video Analytics</h3>
+
+          <p>Understand video performance and spot opportunities.</p>
+
+          <div class="tool-chips">
+            <span>Performance review</span>
+            <span>Engagement</span>
+            <span>Compare videos</span>
+          </div>
+
+          <button class="category-open" data-category-open="analytics">
+            Explore category <b>↗</b>
+          </button>
+
+        </article>
+
+
+        <!-- CONTENT CREATION -->
+
+        <article class="category-card" data-category="content">
+
+          <div class="card-top">
+            <span class="category-icon blue-icon">✎</span>
+            <span class="card-count">04 TOOLS</span>
+          </div>
+
+          <h3>Content Creation</h3>
+
+          <p>Turn a rough idea into a well-structured video.</p>
+
+          <div class="tool-chips">
+            <span>Script writer</span>
+            <span>Story ideas</span>
+            <span>Hooks</span>
+          </div>
+
+          <button class="category-open" data-category-open="content">
+            Explore category <b>↗</b>
+          </button>
+
+        </article>
+
+
+        <!-- THUMBNAIL CREATION -->
+
+        <article class="category-card" data-category="thumbnail">
+
+          <div class="card-top">
+            <span class="category-icon pink-icon">▧</span>
+            <span class="card-count">02 TOOLS</span>
+          </div>
+
+          <h3>Thumbnail Creation</h3>
+
+          <p>Create a simple thumbnail and check its dimensions.</p>
+
+          <div class="tool-chips">
+            <span>Thumbnail maker</span>
+            <span>Image checker</span>
+          </div>
+
+          <button class="category-open" data-category-open="thumbnail">
+            Explore category <b>↗</b>
+          </button>
+
+        </article>
+
+
+        <!-- MUSIC RECOMMENDATION -->
+
+        <article class="category-card" data-category="music">
+
+          <div class="card-top">
+            <span class="category-icon orange-icon">♫</span>
+            <span class="card-count">02 TOOLS</span>
+          </div>
+
+          <h3>Music Recommendation</h3>
+
+          <p>Find music moods and sound-effect ideas for a scene.</p>
+
+          <div class="tool-chips">
+            <span>Music mood</span>
+            <span>Sound effects</span>
+          </div>
+
+          <button class="category-open" data-category-open="music">
+            Explore category <b>↗</b>
+          </button>
+
+        </article>
+
+
+        <!-- SEO OPTIMIZATION - UPDATED -->
+
+        <article class="category-card" data-category="seo">
+
+          <div class="card-top">
+            <span class="category-icon green-icon">⌕</span>
+            <span class="card-count">05 TOOLS</span>
+          </div>
+
+          <h3>SEO Optimization</h3>
+
+          <p>Make video metadata clearer and more relevant.</p>
+
+          <div class="tool-chips">
+            <span>YouTube Title Generator</span>
+            <span>YouTube Tags Generator</span>
+            <span>Description Generator</span>
+            <span>Keyword Ideas</span>
+            <span>Hashtag Generator</span>
+          </div>
+
+          <button class="category-open" data-category-open="seo">
+            Explore category <b>↗</b>
+          </button>
+
+        </article>
+
+
+        <!-- GROWTH AND MONETIZATION -->
+
+        <article class="category-card" data-category="growth">
+
+          <div class="card-top">
+            <span class="category-icon yellow-icon">↗</span>
+            <span class="card-count">03 TOOLS</span>
+          </div>
+
+          <h3>Growth & Monetization</h3>
+
+          <p>Plan growth and estimate possible channel revenue.</p>
+
+          <div class="tool-chips">
+            <span>RPM calculator</span>
+            <span>Growth plan</span>
+            <span>Checklist</span>
+          </div>
+
+          <button class="category-open" data-category-open="growth">
+            Explore category <b>↗</b>
+          </button>
+
+        </article>
+
+
+        <!-- SUBTITLE GENERATION -->
+
+        <article class="category-card" data-category="subtitles">
+
+          <div class="card-top">
+            <span class="category-icon cyan-icon">▤</span>
+            <span class="card-count">03 TOOLS</span>
+          </div>
+
+          <h3>Subtitle Generation</h3>
+
+          <p>Prepare captions, SRT files and translated subtitles.</p>
+
+          <div class="tool-chips">
+            <span>Text to SRT</span>
+            <span>Translate</span>
+            <span>Caption formatter</span>
+          </div>
+
+          <button class="category-open" data-category-open="subtitles">
+            Explore category <b>↗</b>
+          </button>
+
+        </article>
+
+
+        <!-- VOICE OVER -->
+
+        <article class="category-card" data-category="voice">
+
+          <div class="card-top">
+            <span class="category-icon violet-icon">◖</span>
+            <span class="card-count">01 TOOL</span>
+          </div>
+
+          <h3>Voice Over</h3>
+
+          <p>Read scripts aloud using voices available in your browser.</p>
+
+          <div class="tool-chips">
+            <span>Text to speech</span>
+          </div>
+
+          <button class="category-open" data-category-open="voice">
+            Explore category <b>↗</b>
+          </button>
+
+        </article>
+
+
+        <!-- UTILITY TOOLS -->
+
+        <article class="category-card" data-category="utility">
+
+          <div class="card-top">
+            <span class="category-icon slate-icon">⌘</span>
+            <span class="card-count">04 TOOLS</span>
+          </div>
+
+          <h3>Utility Tools</h3>
+
+          <p>Quick calculations and everyday creator helpers.</p>
+
+          <div class="tool-chips">
+            <span>Aspect ratio</span>
+            <span>Word counter</span>
+            <span>File size</span>
+          </div>
+
+          <button class="category-open" data-category-open="utility">
+            Explore category <b>↗</b>
+          </button>
+
+        </article>
+
+      </div>
+
+
+      <!-- TOOL PANEL -->
+
+      <section class="tool-panel" id="toolPanel" hidden>
+
+        <div class="panel-heading">
+
+          <div>
+            <span class="section-kicker" id="panelKicker">CATEGORY</span>
+            <h2 id="panelTitle">Tools</h2>
+            <p id="panelDescription">Choose a tool to get started.</p>
+          </div>
+
+          <button class="close-panel" id="closePanel" aria-label="Close">
+            ✕
+          </button>
+
+        </div>
+
+        <div class="tool-list" id="toolList"></div>
+
+
+        <!-- WORKSPACE -->
+
+        <div class="workspace" id="workspace" hidden>
+
+          <div class="workspace-heading">
+
+            <div>
+              <span class="section-kicker">CREATORKIT TOOL</span>
+              <h3 id="workspaceTitle">Tool</h3>
+            </div>
+
+            <button class="close-workspace" id="closeTool">
+              Close ✕
+            </button>
+
+          </div>
+
+          <div id="toolContent"></div>
+
+        </div>
+
+      </section>
+
+    </section>
+
+
+    <!-- ABOUT SECTION -->
+
+    <section class="about-section" id="about">
+
+      <div class="about-mark">C</div>
+
+      <div>
+        <span class="section-kicker">WHY CREATORKIT FREE</span>
+
+        <h2>More creating. Less tool-hopping.</h2>
+
+        <p>
+          CreatorKit Free brings practical creator utilities together in one workspace.
+          AI-powered features use the connected Gemini backend; browser-based tools run
+          on your device. Some advanced services, such as automatic audio transcription
+          or cloud voice generation, may need an external service and are not falsely
+          presented as included.
+        </p>
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- FOOTER -->
+
+  <footer>
+
+    <a class="logo" href="#">
+      <span class="logo-mark">C</span>
+      CreatorKit<span class="logo-accent">Free</span>
+    </a>
+
+    <p>© 2026 CreatorKit Free. Built for creators.</p>
+
+    <span class="footer-note">
+      Free to use · No subscription required
+    </span>
+
+  </footer>
+
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
